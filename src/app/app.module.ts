@@ -8,15 +8,20 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FoldersMockService } from './commons/service/folders-mock.service';
+import { CommonModule } from '@angular/common';
+import { StudentComponent } from './student/student/student.component';
+import { TeacherComponent } from './teacher/teacher/teacher.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, StudentComponent, TeacherComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, CommonModule],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    FoldersMockService
   ],
   bootstrap: [AppComponent]
 })
