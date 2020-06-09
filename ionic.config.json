@@ -1,0 +1,7 @@
+{
+  "name": "boni-lernbuddy-web",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
