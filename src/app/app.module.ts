@@ -12,9 +12,10 @@ import { FoldersMockService } from './commons/service/folders-mock.service';
 import { CommonModule } from '@angular/common';
 import { StudentComponent } from './student/student/student.component';
 import { TeacherComponent } from './teacher/teacher/teacher.component';
+import {FeedItemComponent} from "./student/student/feed-item/feed-item.component";
 
 @NgModule({
-  declarations: [AppComponent, StudentComponent, TeacherComponent],
+    declarations: [AppComponent, StudentComponent, TeacherComponent, FeedItemComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, CommonModule],
   providers: [
