@@ -1,7 +1,7 @@
 export interface FeedItem {
     title?: string;
-    imagesrc?: string;
+    attachmentPath?: string;
     createDate: Date;
     content: string;
-    type: 'text' | 'aufgabe' | 'bildtext';
+    type: 'text' | 'task' | 'picture' | 'video' | 'audio' | 'link' | 'document';
 }

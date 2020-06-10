@@ -1,9 +1,25 @@
 <div class="feed-item">
   <ion-card>
-    <ion-img *ngIf="item.imagesrc" [src]="item.imagesrc"></ion-img>
+    <!-- type = picture -->
+    <ion-img *ngIf="item.type === 'picture'" [src]="item.attachmentPath"></ion-img>
+    <!-- type = video -->
+    <video *ngIf="item.type === 'video'" controls>
+      <source [src]="item.attachmentPath" />
+    </video>
+    <!-- type = audio -->
+    <audio *ngIf="item.type === 'audio'" controls>
+      <source [src]="item.attachmentPath" />
+    </audio>
+    <!-- type = link -->
+    <div *ngIf="item.type === 'link' && linkPreview" (click)="openLink(linkPreview.url)" class="preview">
+      <h2>{{linkPreview.title}}</h2>
+      <ion-img class="thumbnail" [src]="linkPreview.image"></ion-img>
+      <p>{{linkPreview.description}}</p>
+
+    </div>
     <ion-card-content class="feed-item-content">
       <div class="feed-item-content-wrapper">
-        <ion-icon *ngIf="item.type == 'aufgabe'" name="create-outline"></ion-icon>
+        <ion-icon *ngIf="item.type === 'task'" name="create-outline"></ion-icon>
         <div>
           <h2 class="feed-item-title" *ngIf="item?.title">{{item?.title}}</h2>
           <p class="feed-item-text">{{item?.content}}</p>

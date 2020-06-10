@@ -13,16 +13,20 @@ import { CommonModule } from '@angular/common';
 import { StudentComponent } from './student/student/student.component';
 import { TeacherComponent } from './teacher/teacher/teacher.component';
 import {FeedItemComponent} from "./student/student/feed-item/feed-item.component";
+import { NgxLinkPreviewModule } from 'ngx-link-preview'
+import { HttpClientModule } from '@angular/common/http'
+import { LinkPreviewService } from './commons/service/link-preview.service';
 
 @NgModule({
     declarations: [AppComponent, StudentComponent, TeacherComponent, FeedItemComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, CommonModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, CommonModule, NgxLinkPreviewModule, HttpClientModule],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    FoldersMockService
+    FoldersMockService,
+    LinkPreviewService
   ],
   bootstrap: [AppComponent]
 })

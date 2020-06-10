@@ -28,10 +28,12 @@ export class FoldersMockService {
     const now = new Date();
 
     const iceFeed1: FeedItem = { createDate: now, content: "Guten Morgen! Heute wollen wir uns mit dem Thema \"Entstehung und Aufbau von Gletschern\" beschäftigen.", type: "text" }
-    const iceFeed2: FeedItem = { title: "Was sind Gletscher?", imagesrc: "../../../assets/images/ice-min.jpg", createDate: now, content: "lorem ipsum", type: 'bildtext' };
-    const iceFeed3: FeedItem = { createDate: now, content: "Hier könnte eine Aufgabe stehen.", type: 'aufgabe' };
+    const iceFeed2: FeedItem = { title: "Was sind Gletscher?", attachmentPath: "../../../assets/images/ice-min.jpg", createDate: now, content: "lorem ipsum", type: 'picture' };
+    const iceFeed3: FeedItem = { createDate: now, content: "Hier könnte eine Aufgabe stehen.", type: 'text' };
+    const iceFeed4: FeedItem = { createDate: now, content: "Ein kurzes Video zu Gletschern", type: 'video', attachmentPath: '../../../assets/videos/Glacier.mp4'};
+    const iceFeed5: FeedItem = { createDate: now, content: "Wikipedia Artikel zu Gletschern", type: 'link', attachmentPath: 'https://de.wikipedia.org/wiki/Gletscher'}
 
-    const iceFeedItems = [iceFeed1, iceFeed2, iceFeed3];
+    const iceFeedItems = [iceFeed1, iceFeed2, iceFeed3, iceFeed4, iceFeed5];
 
     geoIceberg.childFeed = iceFeedItems;
 
