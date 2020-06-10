@@ -1,0 +1,45 @@
+.feed-item {
+  ion-card {
+    margin: 0.5rem 0 0.5rem 1.5rem;
+    border-radius: 8px 0 0 8px;
+
+    ion-img {
+      height: auto;
+      width: 100%;
+      min-height: 30px;
+    }
+
+    .feed-item-content {
+      padding-bottom: 0.25rem;
+
+      .time {
+        font-size: 12px;
+        color: #717171;
+        display: block;
+        width: 100%;
+        text-align: end;
+      }
+
+      .feed-item-content-wrapper {
+        display: flex;
+        align-items: center;
+
+        .feed-item-title {
+          font-weight: bold;
+          font-size: 20px;
+        }
+      }
+      ion-icon {
+        width: 40px;
+        height: 40px;
+        margin-right: 0.5rem;
+      }
+
+      .feed-item-text {
+        margin: 0;
+        font-size: 16px;
+      }
+  }
+}
+
+}

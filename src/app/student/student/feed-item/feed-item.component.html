@@ -1,0 +1,15 @@
+<div class="feed-item">
+  <ion-card>
+    <ion-img *ngIf="item.imagesrc" [src]="item.imagesrc"></ion-img>
+    <ion-card-content class="feed-item-content">
+      <div class="feed-item-content-wrapper">
+        <ion-icon *ngIf="item.type == 'aufgabe'" name="create-outline"></ion-icon>
+        <div>
+          <h2 class="feed-item-title" *ngIf="item?.title">{{item?.title}}</h2>
+          <p class="feed-item-text">{{item?.content}}</p>
+        </div>
+      </div>
+      <span class="time">{{ item?.createDate | date: 'hh:mm' }}</span>
+    </ion-card-content>
+  </ion-card>
+</div>

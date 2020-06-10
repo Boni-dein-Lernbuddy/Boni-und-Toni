@@ -1,18 +1,19 @@
 <ion-header translucent="true">
     <ion-toolbar>
-        <ion-title *ngIf="currentFolder"><span (click)="selectFolder(folder)" *ngFor="let folder of navTitleFolders">{{folder.name}}/</span></ion-title>
+        <ion-title></ion-title>
+        <ion-title class="toolbar-title" *ngIf="currentFolder"><span (click)="selectFolder(folder)" *ngFor="let folder of navTitleFolders;
+        index as i">{{folder?.name}} / </span></ion-title>
     </ion-toolbar>
 </ion-header>
 <ion-content>
-    <div class="folders-wrapper" *ngIf="currentFolder && currentFolder.children">
-        <div class="folder" *ngFor="let child of currentFolder.children" (click)="selectFolder(child)">
-            <p>{{ child.name }}</p>
-        </div>
-    </div>
+
+    <ion-list class="folders-wrapper" *ngIf="currentFolder && currentFolder.children">
+        <ion-item class="folder" *ngFor="let child of currentFolder.children" (click)="selectFolder(child)">
+            <ion-label>{{ child.name }}</ion-label>
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+        </ion-item>
+    </ion-list>
     <div class="feed-wrapper" *ngIf="currentFolder && currentFolder.childFeed">
-        <div class="feed-item" *ngFor="let item of currentFolder.childFeed">
-            <h2 *ngIf="item.title">{{item.title}}</h2>
-            <p>{{item.content}}</p>
-        </div>
+        <app-feed-item *ngFor="let item of currentFolder?.childFeed" [item]="item"></app-feed-item>
     </div>
 </ion-content>

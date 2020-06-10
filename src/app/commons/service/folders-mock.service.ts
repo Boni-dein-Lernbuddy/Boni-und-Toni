@@ -10,7 +10,7 @@ export class FoldersMockService {
   constructor() { }
 
   getFolderStructure(): Folder {
-    let root: Folder = { name: 'root', children: [] };
+    let root: Folder = { name: 'Boni', children: [] };
 
     let geography: Folder = { name: 'Erdkunde', parent: root, children: [] };
     let maths: Folder = { name: 'Mathe', parent: root, children: [] };
@@ -27,10 +27,11 @@ export class FoldersMockService {
 
     const now = new Date();
 
-    const iceFeed1: FeedItem = { createDate: now, content: "Guten Morgen! Heute wollen wir uns mit dem Thema \"Entstehung und aufbau von Gletschern\" beschäftigen." }
-    const iceFeed2: FeedItem = { title: "Was sind Gletscher?", createDate: now, content: "lorem ipsum" };
+    const iceFeed1: FeedItem = { createDate: now, content: "Guten Morgen! Heute wollen wir uns mit dem Thema \"Entstehung und Aufbau von Gletschern\" beschäftigen.", type: "text" }
+    const iceFeed2: FeedItem = { title: "Was sind Gletscher?", imagesrc: "../../../assets/images/ice-min.jpg", createDate: now, content: "lorem ipsum", type: 'bildtext' };
+    const iceFeed3: FeedItem = { createDate: now, content: "Hier könnte eine Aufgabe stehen.", type: 'aufgabe' };
 
-    const iceFeedItems = [iceFeed1, iceFeed2];
+    const iceFeedItems = [iceFeed1, iceFeed2, iceFeed3];
 
     geoIceberg.childFeed = iceFeedItems;
 
