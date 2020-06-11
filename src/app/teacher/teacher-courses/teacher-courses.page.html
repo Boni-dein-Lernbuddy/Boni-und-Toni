@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button (click)="openMenu()">
+                <ion-icon name="menu-outline"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>Meine Kurse</ion-title>
+        <ion-buttons slot="end">
+            <ion-button>
+                <ion-icon name="person-circle-outline"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item lines="none" [routerLink]="[course.id]" routerDirection="forward"
+                  *ngFor="let course of courses">
+            <ion-label>{{course.name}}</ion-label>
+        </ion-item>
+    </ion-list>
+</ion-content>
