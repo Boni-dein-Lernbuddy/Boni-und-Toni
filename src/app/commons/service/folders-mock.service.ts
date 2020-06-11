@@ -18,18 +18,76 @@ export class FoldersMockService {
         };
         root.children = [
             this.getGeoFolderStructure(root),
-            {id: 1, name: 'Mathe', parent: root, isUpdated: true, children: []},
-            {id: 2, name: 'Englisch', parent: root, children: []},
-            {id: 3, name: 'Deutsch', parent: root, children: []},
-            {id: 4, name: 'Französisch', parent: root, children: []},
-            {id: 5, name: 'Kunst', parent: root, children: []},
-            {id: 6, name: 'Physik', parent: root, children: []}
+            this.getGermanFolderStructure(root),
+            this.getMathFolderStructure(root),
+            {id: 4, name: '7c - Französisch', parent: root, children: []},
+            {id: 5, name: '5d - Kunst', parent: root, children: []},
+            {id: 6, name: '5a - Physik', parent: root, children: []},
+        ];
+        return root;
+    }
+
+    private getMathFolderStructure(parent: Folder): Folder {
+        const root: Folder = {id: 3, name: '7a - Mathe', parent, isUpdated: true, children: []};
+        root.children = [
+            {
+                id: 8,
+                name: 'Allgemeines',
+                parent: root,
+                isUpdated: true,
+                children: [],
+                feedItems: []
+            },
+            {
+                id: 8,
+                name: 'Zuordnungen',
+                parent: root,
+                isUpdated: true,
+                children: [],
+                feedItems: []
+            },
+            {
+                id: 10,
+                name: 'Der Funktionsgraph',
+                parent: root,
+                isUpdated: true,
+                children: [],
+                feedItems: [
+                    {
+                        id: 11,
+                        headline: 'Begrüßung',
+                        type: 'picture',
+                        content: 'Unser Tafelbild vom Ende der Stunde',
+                        attachmentPath: '../../../assets/images/tafelbild_mathe.png',
+                        createDate: now(-44)
+                    }, {
+                        id: 12,
+                        headline: 'Aufgabe 1',
+                        type: 'task',
+                        content: 'Eure Aufgabe für zu Hause ist es, erste Entdeckungen für den Zusammenhang zwischen Graph und Funktionsgleichung (rot im Tafelbild) zu machen',
+                        createDate: now(-43)
+                    }, {
+                        id: 13,
+                        headline: 'Aufgabe',
+                        type: 'task',
+                        content: 'Öffnet dazu die GeoGebra-Datei "LineareFunktionen.gbb und bearbeitet die Aufgaben vom Arbeitsblatt "Entdecke den Funktionsgraphen einer linearen Funktion"',
+                        createDate: now(-37)
+                    }, {
+                        id: 13,
+                        headline: 'Aufgabe',
+                        type: 'document',
+                        attachmentPath: '../../../assets/documents/aufgabe_funktionen.png',
+                        content: 'Öffnet dazu die GeoGebra-Datei "LineareFunktionen.gbb und bearbeitet die Aufgaben vom Arbeitsblatt "Entdecke den Funktionsgraphen einer linearen Funktion"',
+                        createDate: now(-37)
+                    }
+                ]
+            }
         ];
         return root;
     }
 
     private getGeoFolderStructure(parent: Folder): Folder {
-        const root: Folder = {id: 7, name: 'Erdkunde', parent, isUpdated: true, children: []};
+        const root: Folder = {id: 1, name: '6b - Erdkunde', parent, isUpdated: true, children: []};
         root.children = [
             {
                 id: 8,
@@ -99,6 +157,48 @@ export class FoldersMockService {
                 children: []
             }
         ];
+        return root;
+    }
+
+    private getGermanFolderStructure(parent: Folder): Folder {
+        const root: Folder = {id: 2, name: 'Deutsch als Fremdsprache', parent, isUpdated: true, children: []};
+        root.children = [
+            {
+                id: 8,
+                name: 'Spielerischer Zugang zum Anfangsvokabular',
+                parent: root,
+                isUpdated: true,
+                children: [],
+                feedItems: [{
+                    id: 9,
+                    headline: 'Einführung',
+                    type: 'info',
+                    content: 'Liebe Schüler, <br> hier könnt ihr das Tafelbild von der letzten Woche sehen',
+                    createDate: now(-256)
+
+                },{
+                    id: 10,
+                    headline: 'Aufgabe 1',
+                    type: 'task',
+                    content: '<b>Male</b> nun bis zur nächsten Stunde folgende Wörter: <br>- gehen<br>- riechen<br>- schmecken<br>- radfahren<br>- stehen<br>- schlafen',
+                    createDate: now(-256)
+                },{
+                    id: 11,
+                    headline: 'Aufgabe 2',
+                    type: 'task',
+                    content: 'Schreibe die Wörter in Deutsch und in deiner Herkunftssprache daneben.',
+                    createDate: now(-256)
+                },{
+                    id: 12,
+                    headline: 'Auflösung',
+                    type: 'picture',
+                    content: 'Hier seht ihr eine erste Lösungen.',
+                    attachmentPath: '../../../assets/images/tafelbild.jpg',
+                    createDate: now(0)
+                }]
+            }
+        ];
+
         return root;
     }
 }
