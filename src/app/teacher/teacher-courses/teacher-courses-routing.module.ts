@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: TeacherCoursesPage
+  },
+  {
+    path: ':courseId/topics',
+    loadChildren: () => import('./course-topics/course-topics.module').then(m => m.CourseTopicsPageModule)
   }
 ];
 
