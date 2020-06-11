@@ -10,7 +10,11 @@ export class FoldersMockService {
   constructor() { }
 
   getFolderStructure(): Folder {
-    const root: Folder = { name: 'Deine Fächer', children: [] };
+    const root: Folder = {
+      name: 'Deine Fächer',
+      msg: 'Hier findest du eine Übersicht über all deine Fächer.',
+      children: []
+    };
     root.children = [
       this.getGeoFolderStructure(root),
       { name: 'Mathe', parent: root, isUpdated: true, children: [] },

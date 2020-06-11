@@ -11,6 +11,16 @@
 </ion-header>
 
 <ion-content>
+    <div class="message" *ngIf="currentFolder?.msg">
+        <ion-img src="/assets/icon/boni.svg" alt="Boni - Dein Lernbuddy"></ion-img>
+
+        <ion-card class="speech-bubble">
+            <ion-card-content>
+                <p [innerHTML]="currentFolder.msg"></p>
+            </ion-card-content>
+        </ion-card>
+    </div>
+
     <ion-list class="folders-wrapper" *ngIf="currentFolder && currentFolder.children">
         <ion-item class="folder" *ngFor="let child of currentFolder.children" (click)="selectFolder(child)">
             <ion-label>{{ child.name }}</ion-label>
