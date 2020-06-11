@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="569" height="569" viewBox="0 0 569 569">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Ellipse_127" data-name="Ellipse 127" cx="252.5" cy="252.5" r="252.5" transform="translate(1202 2153)" fill="#53d48a"/>
+    </clipPath>
+    <clipPath id="clip-Toni_-_dein_Lehrbuddy_-_Icon">
+      <rect width="569" height="569"/>
+    </clipPath>
+  </defs>
+  <g id="Toni_-_dein_Lehrbuddy_-_Icon" data-name="Toni - dein Lehrbuddy - Icon" clip-path="url(#clip-Toni_-_dein_Lehrbuddy_-_Icon)">
+    <g id="Gruppe_4" data-name="Gruppe 4" transform="translate(-139 -2028)">
+      <path id="Pfad_126" data-name="Pfad 126" d="M252.5,0C391.952,0,505,113.048,505,252.5S391.952,505,252.5,505,0,391.952,0,252.5,113.048,0,252.5,0Z" transform="translate(172 2060)" fill="#347feb"/>
+      <g id="Gruppe_1" data-name="Gruppe 1" transform="translate(107 164)">
+        <circle id="Ellipse_119" data-name="Ellipse 119" cx="77" cy="77" r="77" transform="translate(61 1907)" fill="#1d4a62"/>
+        <circle id="Ellipse_120" data-name="Ellipse 120" cx="77" cy="77" r="77" transform="translate(419 1907)" fill="#1d4a62"/>
+        <circle id="Ellipse_121" data-name="Ellipse 121" cx="43.5" cy="43.5" r="43.5" transform="translate(95 1941)" fill="#265a79"/>
+        <circle id="Ellipse_122" data-name="Ellipse 122" cx="43.5" cy="43.5" r="43.5" transform="translate(453 1941)" fill="#265a79"/>
+      </g>
+      <g id="Gruppe_maskieren_2" data-name="Gruppe maskieren 2" transform="translate(-1030 -93)" clip-path="url(#clip-path)">
+        <circle id="Ellipse_128" data-name="Ellipse 128" cx="237" cy="237" r="237" transform="translate(1218 2409)" fill="#1d4a62"/>
+      </g>
+      <rect id="Rechteck_1468" data-name="Rechteck 1468" width="426" height="296" rx="130" transform="translate(211 2123)" fill="#fff"/>
+      <rect id="Rechteck_1469" data-name="Rechteck 1469" width="187" height="132" rx="60" transform="translate(330 2266)" fill="#d3dff6"/>
+      <rect id="Rechteck_1472" data-name="Rechteck 1472" width="144" height="106" rx="40" transform="translate(246.612 2275.435) rotate(-45)" fill="#1d4a62"/>
+      <rect id="Rechteck_1470" data-name="Rechteck 1470" width="64" height="44" rx="22" transform="translate(391 2288)" fill="#1d4a62"/>
+      <g id="Gruppe_2" data-name="Gruppe 2" transform="translate(-472 -24)">
+        <circle id="Ellipse_124" data-name="Ellipse 124" cx="31" cy="31" r="31" transform="translate(789 2239)" fill="#fff"/>
+        <circle id="Ellipse_125" data-name="Ellipse 125" cx="21" cy="21" r="21" transform="translate(799 2249)" fill="#265a79"/>
+      </g>
+      <rect id="Rechteck_1471" data-name="Rechteck 1471" width="144" height="106" rx="40" transform="translate(498.565 2173.612) rotate(45)" fill="#1d4a62"/>
+      <g id="Gruppe_3" data-name="Gruppe 3" transform="translate(-320 -24)">
+        <circle id="Ellipse_124-2" data-name="Ellipse 124" cx="31" cy="31" r="31" transform="translate(789 2239)" fill="#fff"/>
+        <circle id="Ellipse_125-2" data-name="Ellipse 125" cx="21" cy="21" r="21" transform="translate(799 2249)" fill="#265a79"/>
+      </g>
+    </g>
+  </g>
+</svg>
