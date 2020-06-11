@@ -5,10 +5,6 @@ import {HomeViewComponent} from "./home-view/home-view/home-view.component";
 
 const routes: Routes = [
     {
-        path: 'tabs',
-        loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-    },
-    {
         path: 'student',
         component: StudentComponent
     },
