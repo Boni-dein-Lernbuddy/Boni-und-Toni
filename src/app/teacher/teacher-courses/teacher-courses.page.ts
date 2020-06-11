@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {AbstractTeacherMenuBaseComponent} from "../common/AbstractTeacherMenuBase.component";
 import {MenuController} from "@ionic/angular";
 import {Course} from "./model/Course";
+import {FoldersMockService} from "../../commons/service/folders-mock.service";
 
 @Component({
     selector: 'app-teacher-courses',
@@ -10,20 +11,17 @@ import {Course} from "./model/Course";
 })
 export class TeacherCoursesPage extends AbstractTeacherMenuBaseComponent implements OnInit {
 
-    courses: Course[] = [
-        new Course(1, 'Erdkunde'),
-        new Course(2, 'Mathe'),
-        new Course(3, 'Englisch'),
-        new Course(4, 'Deutsch'),
-        new Course(5, 'Französisch'),
-        new Course(6, 'Latein')
-    ];
+    courses: Course[];
 
-    constructor(menu: MenuController) {
+    constructor(menu: MenuController, private mock: FoldersMockService) {
         super(menu);
     }
 
     ngOnInit() {
+        this.courses = this.mock.getFolderStructure().children;
     }
 
+    addCourse() {
+        //TODO implement
+    }
 }

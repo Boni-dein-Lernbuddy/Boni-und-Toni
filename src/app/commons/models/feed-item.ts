@@ -1,4 +1,9 @@
 export interface FeedItem {
+
+    id: number,
+
+    headline: string,
+
     title?: string;
 
     /** URI to picture, external website etc. depending on `type`. */

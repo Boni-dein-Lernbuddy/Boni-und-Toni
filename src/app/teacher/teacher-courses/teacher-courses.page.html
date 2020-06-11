@@ -16,9 +16,14 @@
 
 <ion-content>
     <ion-list>
-        <ion-item lines="none" [routerLink]="[course.id]" routerDirection="forward"
+        <ion-item lines="none" [routerLink]="[course.id, 'topics']" routerDirection="forward"
                   *ngFor="let course of courses">
             <ion-label>{{course.name}}</ion-label>
         </ion-item>
     </ion-list>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="addCourse()">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
 </ion-content>
