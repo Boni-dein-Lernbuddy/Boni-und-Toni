@@ -11,8 +11,8 @@
             <ion-item [routerLink]="['courses']" routerDirection="forward">Meine Kurse</ion-item>
             <ion-item [routerLink]="['materials']" routerDirection="forward">Meine Materialien</ion-item>
             <ion-item [routerLink]="['new-material']" routerDirection="forward">Neues Material</ion-item>
-            <ion-item [routerLink]="['schedule']" routerDirection="forward">Stundenplan</ion-item>
-            <ion-item [routerLink]="['appointments']" routerDirection="forward">Termine</ion-item>
+            <ion-item [routerLink]="['schedule']" routerDirection="forward" [disabled]="true">Stundenplan</ion-item>
+            <ion-item [routerLink]="['appointments']" routerDirection="forward" [disabled]="true">Termine</ion-item>
         </ion-list>
     </ion-content>
 </ion-menu>
