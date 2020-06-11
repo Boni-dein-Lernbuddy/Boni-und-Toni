@@ -30,7 +30,7 @@
 
           <p class="feed-item-text" [innerHTML]="item?.content"></p>
 
-          <ion-button *ngIf="item.type === 'task'" size="small">
+          <ion-button *ngIf="item.type === 'task'" size="small" color="success" shape="round">
             <ion-icon slot="start" name="checkmark-outline"></ion-icon>
             <span>Als erledigt markieren</span>
           </ion-button>
