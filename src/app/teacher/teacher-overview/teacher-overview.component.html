@@ -64,7 +64,8 @@
 
         <ion-row>
             <ion-col>
-                <ion-card class="ion-no-margin" [routerLink]="['schedule']" routerDirection="forward">
+                <ion-card class="ion-no-margin" [routerLink]="['schedule']" routerDirection="forward"
+                          [disabled]="true">
                     <ion-card-content>
                         <div class="tile-wrapper">
                             <ion-icon name="list-outline"></ion-icon>
@@ -74,7 +75,8 @@
                 </ion-card>
             </ion-col>
             <ion-col>
-                <ion-card class="ion-no-margin" [routerLink]="['appointments']" routerDirection="forward">
+                <ion-card class="ion-no-margin" [routerLink]="['appointments']" routerDirection="forward"
+                          [disabled]="true">
                     <ion-card-content>
                         <div class="tile-wrapper">
                             <ion-icon name="calendar-outline"></ion-icon>
