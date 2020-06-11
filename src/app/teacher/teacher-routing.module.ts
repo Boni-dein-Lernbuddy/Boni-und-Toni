@@ -12,6 +12,10 @@ const routes: Routes = [
                 path: 'overview',
                 component: TeacherOverviewComponent
             },
+            {
+                path: 'courses',
+                loadChildren: () => import('./teacher-courses/teacher-courses.module').then(m => m.TeacherCoursesPageModule)
+            }
         ]
     }
 ];
