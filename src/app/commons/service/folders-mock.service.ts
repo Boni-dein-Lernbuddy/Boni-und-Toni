@@ -10,16 +10,21 @@ export class FoldersMockService {
   constructor() { }
 
   getFolderStructure(): Folder {
-    const root: Folder = { name: 'Boni', children: [] };
+    const root: Folder = { name: 'Deine Fächer', children: [] };
     root.children = [
       this.getGeoFolderStructure(root),
-      { name: 'Mathe', parent: root, children: [] }
+      { name: 'Mathe', parent: root, isUpdated: true, children: [] },
+      { name: 'Englisch', parent: root, children: [] },
+      { name: 'Deutsch', parent: root, children: [] },
+      { name: 'Französisch', parent: root, children: [] },
+      { name: 'Kunst', parent: root, children: [] },
+      { name: 'Physik', parent: root, children: [] }
     ];
     return root;
   }
 
   private getGeoFolderStructure(parent: Folder): Folder {
-    const root: Folder = { name: 'Erdkunde', parent, children: [] };
+    const root: Folder = { name: 'Erdkunde', parent, isUpdated: true, children: [] };
     root.children = [
       {
         name: 'Allgemeines',
