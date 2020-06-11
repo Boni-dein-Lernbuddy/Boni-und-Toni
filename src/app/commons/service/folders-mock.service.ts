@@ -26,6 +26,8 @@ export class FoldersMockService {
     root.children = rootChildren;
     geography.children = geoChildren;
 
+    geoGeneral.childFeed = [{type: 'info', content: 'Die Videokonferenz findet heute erst 15 Minuten später statt. Start ist um <b>15:15 Uhr</b>.'}];
+
     const iceFeed1: FeedItem = { createDate: now(-44), content: 'Guten Morgen! Heute wollen wir uns mit dem Thema "Entstehung und Aufbau von Gletschern" beschäftigen.', type: 'text' };
     const iceFeed2: FeedItem = { title: 'Was sind Gletscher?', attachmentPath: '../../../assets/images/ice-min.jpg', createDate: now(-43), content: 'lorem ipsum', type: 'picture' };
     const iceFeed3: FeedItem = { createDate: now(-41), content: 'Hier könnte eine Aufgabe stehen.', type: 'text' };
