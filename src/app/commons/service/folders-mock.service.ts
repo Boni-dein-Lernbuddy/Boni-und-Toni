@@ -35,7 +35,7 @@ export class FoldersMockService {
         parent: root,
         isUpdated: true,
         children: [],
-        childFeed: [{
+        feedItems: [{
           type: 'info',
           content: 'Die Videokonferenz findet heute erst 15 Minuten später statt. Start ist um <b>15:15 Uhr</b>.'
         }]
@@ -44,7 +44,7 @@ export class FoldersMockService {
         parent: root,
         isUpdated: true,
         children: [],
-        childFeed: [
+        feedItems: [
           {
             type: 'text',
             content: 'Guten Morgen! Heute wollen wir uns mit dem Thema "Entstehung und Aufbau von Gletschern" beschäftigen.',

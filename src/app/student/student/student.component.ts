@@ -1,6 +1,7 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { Folder } from 'src/app/commons/models/folder';
 import { FoldersMockService } from 'src/app/commons/service/folders-mock.service';
+
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-student',
@@ -8,10 +9,12 @@ import { FoldersMockService } from 'src/app/commons/service/folders-mock.service
   styleUrls: ['./student.component.scss'],
 })
 export class StudentComponent implements OnInit {
-
   currentFolder: Folder;
 
-  constructor(private foldersMockService: FoldersMockService, private changeDetector: ChangeDetectorRef) { }
+  constructor(
+    private foldersMockService: FoldersMockService,
+    private changeDetector: ChangeDetectorRef
+  ) { }
 
   ngOnInit() {
     this.changeDetector.detectChanges();
@@ -19,7 +22,7 @@ export class StudentComponent implements OnInit {
     console.log(this.currentFolder);
   }
 
-  public selectFolder(folder: Folder){
+  public selectFolder(folder: Folder) {
     this.currentFolder = folder;
   }
 
@@ -28,7 +31,7 @@ export class StudentComponent implements OnInit {
 
     folders.push(this.currentFolder);
     let folder = this.currentFolder;
-    while(folder.parent) {
+    while (folder.parent) {
       folder = folder.parent;
       folders.push(folder);
     }
@@ -36,6 +39,7 @@ export class StudentComponent implements OnInit {
     return folders.reverse();
   }
 
-
-
+  public get isCurrentFolderEmpty(): boolean {
+    return !this.currentFolder?.children?.length && !this.currentFolder?.feedItems?.length;
+  }
 }

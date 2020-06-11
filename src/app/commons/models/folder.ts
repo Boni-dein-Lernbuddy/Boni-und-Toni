@@ -8,5 +8,5 @@ export interface Folder {
 
     parent?: Folder;
     children: Folder[];
-    childFeed?: FeedItem[];
+    feedItems?: FeedItem[];
 }
