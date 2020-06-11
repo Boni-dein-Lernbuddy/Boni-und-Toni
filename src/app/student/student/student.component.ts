@@ -9,7 +9,7 @@ import { FoldersMockService } from 'src/app/commons/service/folders-mock.service
 })
 export class StudentComponent implements OnInit {
 
-  private currentFolder: Folder;
+  currentFolder: Folder;
 
   constructor(private foldersMockService: FoldersMockService, private changeDetector: ChangeDetectorRef) { }
 

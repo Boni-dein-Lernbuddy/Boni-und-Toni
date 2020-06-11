@@ -17,8 +17,8 @@ export class FoldersMockService {
 
     const rootChildren: Folder[] = [geography, maths];
 
-    const geoGeneral: Folder = { name: 'Allgemeines', parent: geography, children: [] };
-    const geoIceberg: Folder = { name: 'Gletscher', parent: geography, children: [] };
+    const geoGeneral: Folder = { name: 'Allgemeines', parent: geography, isUpdated: true, children: [] };
+    const geoIceberg: Folder = { name: 'Gletscher', parent: geography, isUpdated: true, children: [] };
     const geoTopography: Folder = { name: 'Topographie', parent: geography, children: [] };
 
     const geoChildren: Folder[] = [geoGeneral, geoIceberg, geoTopography];

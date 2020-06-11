@@ -1,18 +1,28 @@
 <ion-header translucent="true">
     <ion-toolbar>
         <ion-title></ion-title>
-        <ion-title class="toolbar-title" *ngIf="currentFolder"><span (click)="selectFolder(folder)" *ngFor="let folder of navTitleFolders;
-        index as i">{{folder?.name}} / </span></ion-title>
+        <ion-title class="toolbar-title" *ngIf="currentFolder">
+            <span (click)="selectFolder(folder)" *ngFor="let folder of navTitleFolders; last as last">
+                {{ folder?.name }}
+                {{ last ? '' : ' / ' }}
+            </span>
+        </ion-title>
     </ion-toolbar>
 </ion-header>
-<ion-content>
 
+<ion-content>
     <ion-list class="folders-wrapper" *ngIf="currentFolder && currentFolder.children">
         <ion-item class="folder" *ngFor="let child of currentFolder.children" (click)="selectFolder(child)">
             <ion-label>{{ child.name }}</ion-label>
+
+            <ion-chip *ngIf="child.isUpdated" color="success">
+                <ion-label>Neu</ion-label>
+            </ion-chip>
+
             <ion-icon name="arrow-forward-outline"></ion-icon>
         </ion-item>
     </ion-list>
+
     <div class="feed-wrapper" *ngIf="currentFolder && currentFolder.childFeed">
         <app-feed-item *ngFor="let item of currentFolder?.childFeed" [item]="item"></app-feed-item>
     </div>
