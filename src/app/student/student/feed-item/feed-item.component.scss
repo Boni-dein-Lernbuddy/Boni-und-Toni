@@ -43,11 +43,12 @@
           font-weight: bold;
           font-size: 20px;
         }
-      }
-      ion-icon {
-        width: 40px;
-        height: 40px;
-        margin-right: 0.5rem;
+
+        & > ion-icon {
+          width: 40px;
+          height: 40px;
+          margin-right: 0.5rem;
+        }
       }
 
       .feed-item-text {
