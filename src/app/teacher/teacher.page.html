@@ -1,0 +1,19 @@
+<ion-menu side="start" menuId="{{menuId}}" contentId="teacher-main">
+    <ion-header>
+        <ion-toolbar color="primary">
+            <ion-title>Menu</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <ion-item [routerLink]="['overview']" routerDirection="forward">Übersicht</ion-item>
+            <ion-item [routerLink]="['current-session']" routerDirection="forward">Aktueller Kurs</ion-item>
+            <ion-item [routerLink]="['courses']" routerDirection="forward">Meine Kurse</ion-item>
+            <ion-item [routerLink]="['materials']" routerDirection="forward">Meine Materialien</ion-item>
+            <ion-item [routerLink]="['new-material']" routerDirection="forward">Neues Material</ion-item>
+            <ion-item [routerLink]="['schedule']" routerDirection="forward">Stundenplan</ion-item>
+            <ion-item [routerLink]="['appointments']" routerDirection="forward">Termine</ion-item>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+<ion-router-outlet id="teacher-main"></ion-router-outlet>
