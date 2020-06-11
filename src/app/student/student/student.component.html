@@ -11,7 +11,17 @@
 </ion-header>
 
 <ion-content>
-    <ion-list class="folders-wrapper" *ngIf="currentFolder && currentFolder.children">
+    <div class="message" *ngIf="currentFolder?.msg || isCurrentFolderEmpty">
+        <ion-img src="/assets/icon/boni.svg" alt="Boni - Dein Lernbuddy"></ion-img>
+
+        <ion-card class="speech-bubble">
+            <ion-card-content>
+                <p [innerHTML]="currentFolder?.msg || 'Im Ordner wurde noch nichts hinterlegt.'"></p>
+            </ion-card-content>
+        </ion-card>
+    </div>
+
+    <ion-list class="folders-wrapper" *ngIf="currentFolder?.children?.length">
         <ion-item class="folder" *ngFor="let child of currentFolder.children" (click)="selectFolder(child)">
             <ion-label>{{ child.name }}</ion-label>
 
@@ -23,7 +33,7 @@
         </ion-item>
     </ion-list>
 
-    <div class="feed-wrapper" *ngIf="currentFolder && currentFolder.childFeed">
-        <app-feed-item *ngFor="let item of currentFolder?.childFeed" [item]="item"></app-feed-item>
+    <div class="feed-wrapper" *ngIf="currentFolder?.feedItems?.length">
+        <app-feed-item *ngFor="let item of currentFolder?.feedItems" [item]="item"></app-feed-item>
     </div>
 </ion-content>

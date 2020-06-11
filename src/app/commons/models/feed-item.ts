@@ -6,7 +6,7 @@ export interface FeedItem {
 
     createDate?: Date;
 
-    /** Textual content. *Save* HTML elements are allowed. */
+    /** Textual content. (*Safe* HTML elements are allowed.) */
     content: string;
 
     type: 'text' | 'task' | 'picture' | 'video' | 'audio' | 'link' | 'document' | 'info';
