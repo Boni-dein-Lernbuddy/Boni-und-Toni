@@ -1,0 +1,37 @@
+<ion-menu side="start" [menuId]="menuId" contentId="student-main">
+    <ion-header>
+        <ion-toolbar color="primary">
+            <ion-title>Menu</ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+        <ion-list (click)="closeMenu()">
+            <ion-item routerLink="/" routerDirection="forward">
+                Startseite
+            </ion-item>
+
+            <ion-item routerLink="/student/overview" routerDirection="forward">
+                Übersicht
+            </ion-item>
+
+            <ion-item routerLink="/student/current-subject" routerDirection="forward">
+                Aktuelles Fach
+            </ion-item>
+
+            <ion-item routerLink="/student/subjects" routerDirection="forward">
+                Meine Fächer
+            </ion-item>
+
+            <ion-item routerLink="/student/schedule" routerDirection="forward" [disabled]="true">
+                Stundenplan
+            </ion-item>
+
+            <ion-item routerLink="/student/appointments" routerDirection="forward" [disabled]="true">
+                Termine
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-router-outlet id="student-main"></ion-router-outlet>

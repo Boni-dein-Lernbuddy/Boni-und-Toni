@@ -1,5 +1,5 @@
-import {Injectable} from '@angular/core';
-import {Folder} from '../models/folder';
+import { Injectable } from '@angular/core';
+import { Folder } from '../models/folder';
 
 @Injectable({
     providedIn: 'root'
@@ -20,15 +20,15 @@ export class FoldersMockService {
             this.getGeoFolderStructure(root),
             this.getGermanFolderStructure(root),
             this.getMathFolderStructure(root),
-            {id: 4, name: '7c - Französisch', parent: root, children: []},
-            {id: 5, name: '5d - Kunst', parent: root, children: []},
-            {id: 6, name: '5a - Physik', parent: root, children: []},
+            { id: 4, name: 'Französisch', parent: root, children: [] },
+            { id: 5, name: 'Kunst', parent: root, children: [] },
+            { id: 6, name: 'Physik', parent: root, children: [] },
         ];
         return root;
     }
 
     private getMathFolderStructure(parent: Folder): Folder {
-        const root: Folder = {id: 3, name: '7a - Mathe', parent, isUpdated: true, children: []};
+        const root: Folder = { id: 3, name: 'Mathe', parent, isUpdated: true, children: [] };
         root.children = [
             {
                 id: 8,
@@ -59,7 +59,7 @@ export class FoldersMockService {
                         type: 'picture',
                         content: 'Unser Tafelbild vom Ende der Stunde',
                         attachmentPath: '../../../assets/images/tafelbild_mathe.png',
-                        createDate: now(-44)
+                        createDate: now(-144)
                     }, {
                         id: 12,
                         headline: 'Aufgabe 1',
@@ -78,7 +78,7 @@ export class FoldersMockService {
                         type: 'document',
                         attachmentPath: '../../../assets/documents/aufgabe_funktionen.png',
                         content: 'Öffnet dazu die GeoGebra-Datei "LineareFunktionen.gbb und bearbeitet die Aufgaben vom Arbeitsblatt "Entdecke den Funktionsgraphen einer linearen Funktion"',
-                        createDate: now(-37)
+                        createDate: now(-27)
                     }
                 ]
             }
@@ -87,7 +87,7 @@ export class FoldersMockService {
     }
 
     private getGeoFolderStructure(parent: Folder): Folder {
-        const root: Folder = {id: 1, name: '6b - Erdkunde', parent, isUpdated: true, children: []};
+        const root: Folder = { id: 1, name: 'Erdkunde', parent, isUpdated: true, children: [] };
         root.children = [
             {
                 id: 8,
@@ -161,7 +161,7 @@ export class FoldersMockService {
     }
 
     private getGermanFolderStructure(parent: Folder): Folder {
-        const root: Folder = {id: 2, name: 'Deutsch als Fremdsprache', parent, isUpdated: true, children: []};
+        const root: Folder = { id: 2, name: 'Deutsch als Fremdsprache', parent, isUpdated: true, children: [] };
         root.children = [
             {
                 id: 8,
@@ -176,25 +176,25 @@ export class FoldersMockService {
                     content: 'Liebe Schüler, <br> hier könnt ihr das Tafelbild von der letzten Woche sehen',
                     createDate: now(-256)
 
-                },{
+                }, {
                     id: 10,
                     headline: 'Aufgabe 1',
                     type: 'task',
                     content: '<b>Male</b> nun bis zur nächsten Stunde folgende Wörter: <br>- gehen<br>- riechen<br>- schmecken<br>- radfahren<br>- stehen<br>- schlafen',
-                    createDate: now(-256)
-                },{
+                    createDate: now(-128)
+                }, {
                     id: 11,
                     headline: 'Aufgabe 2',
                     type: 'task',
                     content: 'Schreibe die Wörter in Deutsch und in deiner Herkunftssprache daneben.',
-                    createDate: now(-256)
-                },{
+                    createDate: now(-64)
+                }, {
                     id: 12,
                     headline: 'Auflösung',
                     type: 'picture',
                     content: 'Hier seht ihr eine erste Lösungen.',
                     attachmentPath: '../../../assets/images/tafelbild-min.jpg',
-                    createDate: now(0)
+                    createDate: now(32)
                 }]
             }
         ];

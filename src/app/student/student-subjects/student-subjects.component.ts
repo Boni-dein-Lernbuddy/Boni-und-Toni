@@ -1,25 +1,30 @@
 import { Folder } from 'src/app/commons/models/folder';
 import { FoldersMockService } from 'src/app/commons/service/folders-mock.service';
 
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
+
+import {
+  AbstractMenuBaseComponent, STUDENT_MENU_ID
+} from '../../commons/components/AbstractMenuBase.component';
 
 @Component({
-  selector: 'app-student',
-  templateUrl: './student.component.html',
-  styleUrls: ['./student.component.scss'],
+  selector: 'app-student-subjects',
+  templateUrl: './student-subjects.component.html',
+  styleUrls: ['./student-subjects.component.scss'],
 })
-export class StudentComponent implements OnInit {
+export class StudentSubjectsComponent extends AbstractMenuBaseComponent implements OnInit {
   currentFolder: Folder;
 
   constructor(
-    private foldersMockService: FoldersMockService,
-    private changeDetector: ChangeDetectorRef
-  ) { }
+    private menu: MenuController,
+    private mock: FoldersMockService
+  ) {
+    super(menu, STUDENT_MENU_ID);
+  }
 
   ngOnInit() {
-    this.changeDetector.detectChanges();
-    this.currentFolder = this.foldersMockService.getFolderStructure();
-    console.log(this.currentFolder);
+    this.currentFolder = this.mock.getFolderStructure();
   }
 
   public selectFolder(folder: Folder) {

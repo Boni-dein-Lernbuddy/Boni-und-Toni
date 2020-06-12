@@ -1,20 +1,20 @@
-import {Component, OnInit} from '@angular/core';
-import {MenuController} from "@ionic/angular";
-import {AbstractTeacherMenuBaseComponent, TEACHER_MENU_ID} from "./common/AbstractTeacherMenuBase.component";
+import { Component } from '@angular/core';
+import { MenuController } from '@ionic/angular';
+
+import {
+    AbstractMenuBaseComponent, TEACHER_MENU_ID
+} from '../commons/components/AbstractMenuBase.component';
 
 @Component({
     selector: 'app-teacher',
     templateUrl: './teacher.page.html',
     styleUrls: ['./teacher.page.scss'],
 })
-export class TeacherPage extends AbstractTeacherMenuBaseComponent implements OnInit {
+export class TeacherPage extends AbstractMenuBaseComponent {
 
-    menuId = TEACHER_MENU_ID;
+    readonly menuId = TEACHER_MENU_ID;
 
     constructor(menu: MenuController) {
-        super(menu);
-    }
-
-    ngOnInit() {
+        super(menu, TEACHER_MENU_ID);
     }
 }

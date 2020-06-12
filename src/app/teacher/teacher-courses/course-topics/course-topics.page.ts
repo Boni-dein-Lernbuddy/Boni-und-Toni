@@ -1,21 +1,24 @@
-import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
-import {FoldersMockService} from "../../../commons/service/folders-mock.service";
-import {Folder} from "../../../commons/models/folder";
-import {AbstractTeacherMenuBaseComponent} from "../../common/AbstractTeacherMenuBase.component";
-import {MenuController} from "@ionic/angular";
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { MenuController } from '@ionic/angular';
+
+import {
+    AbstractMenuBaseComponent, TEACHER_MENU_ID
+} from '../../../commons/components/AbstractMenuBase.component';
+import { Folder } from '../../../commons/models/folder';
+import { FoldersMockService } from '../../../commons/service/folders-mock.service';
 
 @Component({
     selector: 'app-course-topics',
     templateUrl: './course-topics.page.html',
     styleUrls: ['./course-topics.page.scss'],
 })
-export class CourseTopicsPage extends AbstractTeacherMenuBaseComponent implements OnInit {
+export class CourseTopicsPage extends AbstractMenuBaseComponent implements OnInit {
 
-    course: Folder
+    course: Folder;
 
     constructor(menu: MenuController, private route: ActivatedRoute, private mock: FoldersMockService) {
-        super(menu);
+        super(menu, TEACHER_MENU_ID);
     }
 
     ngOnInit() {

@@ -20,22 +20,22 @@
     <ion-grid>
         <ion-row>
             <ion-col>
-                <ion-card class="ion-no-margin" routerLink="/teacher/current-course" routerDirection="forward">
+                <ion-card class="ion-no-margin" routerLink="/student/current-subject" routerDirection="forward">
                     <ion-card-content>
                         <div class="tile-wrapper">
                             <ion-icon name="log-out-outline"></ion-icon>
-                            <span>Aktueller Kurs</span>
+                            <span>Aktuelles Fach</span>
                         </div>
                     </ion-card-content>
                 </ion-card>
             </ion-col>
 
             <ion-col>
-                <ion-card class="ion-no-margin" routerLink="/teacher/courses" routerDirection="forward">
+                <ion-card class="ion-no-margin" routerLink="/student/subjects" routerDirection="forward">
                     <ion-card-content>
                         <div class="tile-wrapper">
                             <ion-icon name="layers-outline"></ion-icon>
-                            <span>Meine Kurse</span>
+                            <span>Meine Fächer</span>
                         </div>
                     </ion-card-content>
                 </ion-card>
@@ -44,31 +44,7 @@
 
         <ion-row>
             <ion-col>
-                <ion-card class="ion-no-margin" routerLink="/teacher/materials" routerDirection="forward">
-                    <ion-card-content>
-                        <div class="tile-wrapper">
-                            <ion-icon name="file-tray-stacked-outline"></ion-icon>
-                            <span>Meine Materialien</span>
-                        </div>
-                    </ion-card-content>
-                </ion-card>
-            </ion-col>
-
-            <ion-col>
-                <ion-card class="ion-no-margin" routerLink="/teacher/new-material" routerDirection="forward">
-                    <ion-card-content>
-                        <div class="tile-wrapper">
-                            <ion-icon name="add-outline"></ion-icon>
-                            <span>Neues Material</span>
-                        </div>
-                    </ion-card-content>
-                </ion-card>
-            </ion-col>
-        </ion-row>
-
-        <ion-row>
-            <ion-col>
-                <ion-card class="ion-no-margin" routerLink="/teacher/schedule" routerDirection="forward"
+                <ion-card class="ion-no-margin" routerLink="/student/schedule" routerDirection="forward"
                     [disabled]="true">
                     <ion-card-content>
                         <div class="tile-wrapper">
@@ -80,7 +56,7 @@
             </ion-col>
 
             <ion-col>
-                <ion-card class="ion-no-margin" routerLink="/teacher/appointments" routerDirection="forward"
+                <ion-card class="ion-no-margin" routerLink="/student/appointments" routerDirection="forward"
                     [disabled]="true">
                     <ion-card-content>
                         <div class="tile-wrapper">

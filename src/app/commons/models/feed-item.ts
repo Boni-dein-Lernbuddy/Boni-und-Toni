@@ -1,8 +1,8 @@
 export interface FeedItem {
 
-    id: number,
+    id: number;
 
-    headline: string,
+    headline: string;
 
     title?: string;
 

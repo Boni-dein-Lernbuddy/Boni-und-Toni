@@ -4,34 +4,42 @@
             <ion-title>Menu</ion-title>
         </ion-toolbar>
     </ion-header>
+
     <ion-content>
-        <ion-list>
-            <ion-item [routerLink]="['/teacher/overview']" routerDirection="forward" (click)="closeMenu()">
+        <ion-list (click)="closeMenu()">
+            <ion-item routerLink="/" routerDirection="forward">
+                Startseite
+            </ion-item>
+
+            <ion-item routerLink="/teacher/overview" routerDirection="forward">
                 Übersicht
             </ion-item>
-            <ion-item [routerLink]="['/teacher/current-session']" routerDirection="forward" (click)="closeMenu()">
+
+            <ion-item routerLink="/teacher/current-session" routerDirection="forward">
                 Aktueller Kurs
             </ion-item>
-            <ion-item [routerLink]="['/teacher/courses']" routerDirection="forward" (click)="closeMenu()">
+
+            <ion-item routerLink="/teacher/courses" routerDirection="forward">
                 Meine Kurse
             </ion-item>
-            <ion-item [routerLink]="['/teacher/materials']" routerDirection="forward" (click)="closeMenu()">
-                Meine
-                Materialien
+
+            <ion-item routerLink="/teacher/materials" routerDirection="forward">
+                Meine Materialien
             </ion-item>
-            <ion-item [routerLink]="['/teacher/new-material']" routerDirection="forward" (click)="closeMenu()">
-                Neues
-                Material
+
+            <ion-item routerLink="/teacher/new-material" routerDirection="forward">
+                Neues Material
             </ion-item>
-            <ion-item [routerLink]="['/teacher/schedule']" routerDirection="forward" (click)="closeMenu()"
-                      [disabled]="true">
+
+            <ion-item routerLink="/teacher/schedule" routerDirection="forward" [disabled]="true">
                 Stundenplan
             </ion-item>
-            <ion-item [routerLink]="['/teacher/appointments']" routerDirection="forward" (click)="closeMenu()"
-                      [disabled]="true">
+
+            <ion-item routerLink="/teacher/appointments" routerDirection="forward" [disabled]="true">
                 Termine
             </ion-item>
         </ion-list>
     </ion-content>
 </ion-menu>
+
 <ion-router-outlet id="teacher-main"></ion-router-outlet>
