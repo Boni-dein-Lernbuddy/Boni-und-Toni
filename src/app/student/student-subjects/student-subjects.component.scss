@@ -1,33 +1,3 @@
 .folder, .toolbar-title {
   cursor: pointer;
 }
-
-.message {
-  display: flex;
-  gap: 10px;
-
-  ion-img {
-    max-width: 80px;
-  }
-
-  ion-card {
-    width: 100%;
-    height: max-content;
-
-    :host &.speech-bubble {
-      overflow: visible;
-
-      &::before {
-        display: block;
-        height: 12px;
-        width:  15px;
-        position: absolute;
-        left: -7px;
-        top: 25px;
-        content: '\00a0';
-        transform: rotate(29deg) skew(-35deg);
-        background-color: inherit;
-      }
-    }
-  }
-}

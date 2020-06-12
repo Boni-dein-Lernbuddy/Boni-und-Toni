@@ -8,10 +8,12 @@ import { StudentRoutingModule } from './student-routing.module';
 import { FeedItemComponent } from './student-subjects/feed-item/feed-item.component';
 import { StudentSubjectsComponent } from './student-subjects/student-subjects.component';
 import { StudentComponent } from './student.component';
+import { CommonsModule } from '../commons/commons.module';
 
 @NgModule({
     imports: [
         CommonModule,
+        CommonsModule,
         FormsModule,
         IonicModule,
         StudentRoutingModule
