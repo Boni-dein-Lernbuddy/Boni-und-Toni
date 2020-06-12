@@ -1,4 +1,7 @@
 .feed-item {
+  ion-card-title {
+    margin: 15px;
+  }
 
   ion-icon {
     color: var(--ion-color-primary);
@@ -42,11 +45,6 @@
       .feed-item-content-wrapper {
         display: flex;
         align-items: center;
-
-        .feed-item-title {
-          font-weight: bold;
-          font-size: 20px;
-        }
 
         & > ion-icon {
           width: 40px;

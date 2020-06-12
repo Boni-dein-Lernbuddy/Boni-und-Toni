@@ -22,7 +22,7 @@
     </ion-button>
     <ion-list>
         <ion-item lines="none" *ngFor="let feed of topic.feedItems">
-            <ion-label>{{feed.headline}}</ion-label>
+            <ion-label>{{feed.title}}</ion-label>
             <ion-toggle slot="start" name="feed-{{feed.id}}" checked (ionChange)="updateState($event)"
                         (click)="$event.preventDefault(); $event.stopPropagation();"></ion-toggle>
             <ion-button slot="end" fill="clear">

@@ -1,5 +1,9 @@
 <div class="feed-item">
   <ion-card>
+    <ion-card-title *ngIf="item.title">
+      {{ item.title }}
+    </ion-card-title>
+
     <!-- type = picture -->
     <ion-img *ngIf="item.type === 'picture'" [src]="item.attachmentPath"></ion-img>
 

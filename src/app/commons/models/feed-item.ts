@@ -2,8 +2,6 @@ export interface FeedItem {
 
     id: number;
 
-    headline: string;
-
     title?: string;
 
     /** URI to picture, external website etc. depending on `type`. */
@@ -12,7 +10,7 @@ export interface FeedItem {
     createDate?: Date;
 
     /** Textual content. (*Safe* HTML elements are allowed.) */
-    content: string;
+    content?: string;
 
     type: 'text' | 'task' | 'picture' | 'video' | 'audio' | 'link' | 'document' | 'info';
 }
