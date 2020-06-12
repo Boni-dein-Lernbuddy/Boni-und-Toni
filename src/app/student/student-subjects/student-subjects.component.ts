@@ -4,11 +4,11 @@ import { FoldersMockService } from 'src/app/commons/service/folders-mock.service
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-student',
-  templateUrl: './student.component.html',
-  styleUrls: ['./student.component.scss'],
+  selector: 'app-student-subjects',
+  templateUrl: './student-subjects.component.html',
+  styleUrls: ['./student-subjects.component.scss'],
 })
-export class StudentComponent implements OnInit {
+export class StudentSubjectsComponent implements OnInit {
   currentFolder: Folder;
 
   constructor(

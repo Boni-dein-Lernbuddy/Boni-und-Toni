@@ -12,17 +12,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FoldersMockService } from './commons/service/folders-mock.service';
 import { LinkPreviewService } from './commons/service/link-preview.service';
-import { FeedItemComponent } from './student/student/feed-item/feed-item.component';
-import { StudentComponent } from './student/student/student.component';
 
 registerLocaleData(localeDe);
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        FeedItemComponent,
-        StudentComponent,
-    ],
+    declarations: [AppComponent],
     imports: [
         AppRoutingModule,
         BrowserModule,
