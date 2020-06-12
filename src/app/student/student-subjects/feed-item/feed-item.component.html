@@ -28,15 +28,17 @@
       <div class="feed-item-content-wrapper">
         <ion-icon *ngIf="item.type === 'task'" name="create-outline"></ion-icon>
         <ion-icon *ngIf="item.type === 'info'" name="information-circle-outline"></ion-icon>
+        <ion-icon *ngIf="item.type === 'document'" name="download-outline"></ion-icon>
 
         <div>
-          <h2 class="feed-item-title" *ngIf="item?.title">{{item?.title}}</h2>
-
           <p class="feed-item-text" [innerHTML]="item?.content"></p>
 
           <ion-button *ngIf="item.type === 'task'" size="small" color="success" shape="round">
             <ion-icon slot="start" name="checkmark-outline"></ion-icon>
             <span>Als erledigt markieren</span>
+          </ion-button>
+          <ion-button *ngIf="item.type === 'document'" size="small" shape="round" [href]="item.attachmentPath" download>
+            {{ itemAttachementFile }}
           </ion-button>
         </div>
       </div>

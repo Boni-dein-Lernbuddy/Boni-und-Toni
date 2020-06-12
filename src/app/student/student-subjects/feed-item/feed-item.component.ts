@@ -12,11 +12,13 @@ export class FeedItemComponent implements OnInit {
   @Input()
   item: FeedItem;
 
-  linkPreview: LinkPreview
-
-  constructor(private linkPreviewService: LinkPreviewService) {
-    
+  get itemAttachementFile(): string {
+    return this.item.attachmentPath?.replace(/^.*[/]/, '');
   }
+
+  linkPreview: LinkPreview;
+
+  constructor(private linkPreviewService: LinkPreviewService) {  }
 
   ngOnInit() {
     if (this.item.type === 'link') {
