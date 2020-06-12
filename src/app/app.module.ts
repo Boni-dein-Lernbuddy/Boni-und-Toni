@@ -10,8 +10,6 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FoldersMockService } from './commons/service/folders-mock.service';
-import { LinkPreviewService } from './commons/service/link-preview.service';
 
 registerLocaleData(localeDe);
 
@@ -32,8 +30,6 @@ registerLocaleData(localeDe);
             provide: RouteReuseStrategy,
             useClass: IonicRouteStrategy
         },
-        FoldersMockService,
-        LinkPreviewService,
         SplashScreen,
         StatusBar
     ],

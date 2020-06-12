@@ -22,15 +22,8 @@
 </ion-header>
 
 <ion-content>
-    <div class="message" *ngIf="currentFolder?.msg || isCurrentFolderEmpty">
-        <ion-img src="/assets/icon/boni.svg" alt="Boni - Dein Lernbuddy"></ion-img>
-
-        <ion-card class="speech-bubble">
-            <ion-card-content>
-                <p [innerHTML]="currentFolder?.msg || 'Im Ordner wurde noch nichts hinterlegt.'"></p>
-            </ion-card-content>
-        </ion-card>
-    </div>
+    <app-msg-from-boni [msg]="currentFolder?.msg || 'Im Ordner wurde noch nichts hinterlegt. 😞'"
+        *ngIf="currentFolder?.msg || isCurrentFolderEmpty"></app-msg-from-boni>
 
     <ion-list class="folders-wrapper" *ngIf="currentFolder?.children?.length">
         <ion-item class="folder" *ngFor="let child of currentFolder.children" (click)="selectFolder(child)">

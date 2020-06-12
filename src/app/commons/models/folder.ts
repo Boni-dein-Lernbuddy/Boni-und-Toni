@@ -5,7 +5,7 @@ export interface Folder {
     id: number;
     name: string;
     isUpdated?: boolean;
-    /** Friendly message from Boni regarding this "folder". (*Safe* HTML elements are allowed.) */
+    /** Friendly message from Boni regarding this "folder". (See `MsgFromBoniComponent` for more details.) */
     msg?: string;
 
     parent?: Folder;
