@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 
 import {
@@ -10,6 +10,8 @@ import {
     templateUrl: './student.component.html'
 })
 export class StudentComponent extends AbstractMenuBaseComponent {
+    @HostBinding('class') private className = 'student-view';
+
     readonly menuId = STUDENT_MENU_ID;
 
     constructor(menu: MenuController) {

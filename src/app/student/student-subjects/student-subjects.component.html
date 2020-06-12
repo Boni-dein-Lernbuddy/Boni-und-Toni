@@ -1,12 +1,12 @@
 <ion-header translucent="true">
     <ion-toolbar>
         <ion-buttons slot="start">
-            <ion-button (click)="openMenu()">
+            <ion-button color="primary" (click)="openMenu()">
                 <ion-icon name="menu-outline"></ion-icon>
             </ion-button>
         </ion-buttons>
 
-        <ion-title class="toolbar-title" *ngIf="currentFolder">
+        <ion-title class="toolbar-title" color="primary" *ngIf="currentFolder">
             <span (click)="selectFolder(folder)" *ngFor="let folder of navTitleFolders; last as last">
                 {{ folder?.name }}
                 {{ last ? '' : ' / ' }}
@@ -14,7 +14,7 @@
         </ion-title>
 
         <ion-buttons slot="end">
-            <ion-button>
+            <ion-button color="primary">
                 <ion-icon name="person-circle-outline"></ion-icon>
             </ion-button>
         </ion-buttons>
