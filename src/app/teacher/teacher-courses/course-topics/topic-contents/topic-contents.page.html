@@ -19,11 +19,13 @@
         Vorschau ansehen
     </ion-button>
     <ion-list>
-        <ion-item lines="none" [routerLink]="[feed.id, 'contents']" routerDirection="forward"
-                  *ngFor="let feed of topic.feedItems">
+        <ion-item lines="none" *ngFor="let feed of topic.feedItems">
             <ion-label>{{feed.headline}}</ion-label>
             <ion-toggle slot="start" name="feed-{{feed.id}}" checked (ionChange)="updateState($event)"
                         (click)="$event.preventDefault(); $event.stopPropagation();"></ion-toggle>
+            <ion-button slot="end" fill="clear">
+                <ion-icon name="settings-outline" size="large"></ion-icon>
+            </ion-button>
         </ion-item>
     </ion-list>
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
