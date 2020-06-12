@@ -193,7 +193,7 @@ export class FoldersMockService {
                     headline: 'Auflösung',
                     type: 'picture',
                     content: 'Hier seht ihr eine erste Lösungen.',
-                    attachmentPath: '../../../assets/images/tafelbild.jpg',
+                    attachmentPath: '../../../assets/images/tafelbild-min.jpg',
                     createDate: now(0)
                 }]
             }
