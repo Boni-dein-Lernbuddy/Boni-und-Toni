@@ -3,26 +3,71 @@
   position: relative;
   background: #FFFFFF;
 
+  a {
+    text-decoration: none;
+  }
+
+  .section-home {
+    display: block;
+    padding: 3rem 1rem 3rem 1rem;
+    background: #FFFFFF;
+    position: relative;
+    text-align: center;
+
+
+    .sub-heading {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      color: #000000;
+
+      + h1 {
+        padding-top: 0;
+        margin-top: 0.25rem;
+        color: #000000;
+      }
+    }
+
+    p {
+      color: #000000;
+      max-width: 650px;
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 1rem;
+    }
+
+    .youtube-video {
+      margin-top: 1rem;
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+    }
+  }
+
+  .section-spacer {
+    height: 80px;
+  }
+
+  .section-home-boni, .section-home-demo, .section-home-social {
+    background: lightgray;
+  }
+
   .section-home-boni {
     display: flex;
-    padding-top: 80px;
-    padding-bottom: 60px;
     justify-content: center;
-    background: lightgray;
+    padding-top: 80px;
 
     &:after {
+      background: lightgray;
       content: '';
       position: absolute;
       bottom: -50%;
-      width: 150%;
+      width: 160%;
       height: 100%;
-      background: lightgray;
-      -webkit-transform: skew(-84deg);
-      -ms-transform: skew(-84deg);
-      transform: skew(-84deg);
-      z-index: -1;
+      transform: skew(-88deg);
     }
-
     .avatar {
       max-width: 30%;
       min-width: 80px;
@@ -45,9 +90,14 @@
       box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), -2px 2px 2px 0 rgba(0, 0, 0, 0.14);
       color: #000000;
 
-      @media (max-width: 510px) {
-        font-size: 1rem;
+      p {
+        font-size: 2rem;
+
+        @media (max-width: 510px) {
+          font-size: 1rem;
+        }
       }
+
 
       &:before {
         display: block;
