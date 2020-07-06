@@ -1,30 +1,117 @@
-.toolbar-images {
-  display: flex;
+.content-wrapper {
   justify-content: center;
+  position: relative;
+  background: #FFFFFF;
 
-  ion-img {
-    max-width: 120px;
-    height: auto;
+  a {
+    text-decoration: none;
+  }
+
+  .section-home {
+    display: block;
+    padding: 3rem 1rem 3rem 1rem;
+    background: #FFFFFF;
+    position: relative;
+    text-align: center;
+
+
+    .sub-heading {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      color: #000000;
+
+      + h1 {
+        padding-top: 0;
+        margin-top: 0.25rem;
+        color: #000000;
+      }
+    }
+
+    p {
+      color: #000000;
+      max-width: 650px;
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 1rem;
+    }
+
+    .youtube-video {
+      margin-top: 1rem;
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+    }
+  }
+
+  .section-spacer {
+    height: 80px;
+  }
+
+  .section-home-boni, .section-home-demo, .section-home-social {
+    background: lightgray;
+  }
+
+  .section-home-boni {
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+
+    &:after {
+      background: lightgray;
+      content: '';
+      position: absolute;
+      bottom: -50%;
+      width: 160%;
+      height: 100%;
+      transform: skew(-88deg);
+    }
+    .avatar {
+      max-width: 30%;
+      min-width: 80px;
+      margin: 1rem;
+    }
+
+    .speech-bubble {
+      display: flex;
+      max-height: 140px;
+      justify-content: center;
+      flex-direction: column;
+      background: #FFFFFF;
+      padding: 2rem;
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 1rem;
+      border-radius: 0.25rem;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), -2px 2px 2px 0 rgba(0, 0, 0, 0.14);
+      color: #000000;
+
+      p {
+        font-size: 2rem;
+
+        @media (max-width: 510px) {
+          font-size: 1rem;
+        }
+      }
+
+
+      &:before {
+        display: block;
+        height: 32px;
+        width: 35px;
+        position: absolute;
+        left: -17px;
+        top: 40%;
+        content: " ";
+        transform: rotate(45deg);
+        background-color: inherit;
+        box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), -2px 2px 2px 0 rgba(0, 0, 0, 0.14)
+      }
+    }
   }
 }
 
-.welcome-text {
-  padding: 1rem;
-  text-align: center;
-
-  h1 {
-    margin-bottom: 0.75rem;
-  }
-}
-
-.card-with-link {
-  text-decoration: none;
-
-  .card-content-without-padding {
-    padding: 1rem 0;
-  }
-}
-
-app-msg-from-boni {
-  margin-left: 12px;
-}
