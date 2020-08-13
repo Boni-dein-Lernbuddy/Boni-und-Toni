@@ -1,5 +1,5 @@
-import { Folder } from 'src/app/commons/models/folder';
-import { FoldersMockService } from 'src/app/commons/service/folders-mock.service';
+import { Folder } from '../../commons/models/folder';
+import { FoldersMockService } from '../../commons/service/folders-mock.service';
 
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
@@ -45,6 +45,6 @@ export class StudentSubjectsComponent extends AbstractMenuBaseComponent implemen
   }
 
   public get isCurrentFolderEmpty(): boolean {
-    return !this.currentFolder?.children?.length && !this.currentFolder?.feedItems?.length;
+    return !this.currentFolder.children.length && !this.currentFolder.feedItems.length;
   }
 }

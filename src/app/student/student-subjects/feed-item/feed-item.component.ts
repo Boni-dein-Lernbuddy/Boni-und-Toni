@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FeedItem } from "../../../commons/models/feed-item";
-import { LinkPreview } from 'src/app/commons/models/link-preview';
-import { LinkPreviewService } from 'src/app/commons/service/link-preview.service';
+import { LinkPreview } from '../../../commons/models/link-preview';
+import { LinkPreviewService } from '../../../commons/service/link-preview.service';
 
 @Component({
   selector: 'app-feed-item',
@@ -13,7 +13,7 @@ export class FeedItemComponent implements OnInit {
   item: FeedItem;
 
   get itemAttachementFile(): string {
-    return this.item.attachmentPath?.replace(/^.*[/]/, '');
+    return this.item.attachmentPath.replace(/^.*[/]/, '');
   }
 
   linkPreview: LinkPreview;
